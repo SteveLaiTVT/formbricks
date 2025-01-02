@@ -10,11 +10,6 @@
       "dependsOn": ["@formbricks/api#build"],
       "persistent": true
     },
-    "@formbricks/demo#go": {
-      "cache": false,
-      "dependsOn": ["@formbricks/js#build"],
-      "persistent": true
-    },
     "@formbricks/js#build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
@@ -32,18 +27,6 @@
       "dependsOn": ["@formbricks/js-core#build"]
     },
     "@formbricks/js-core#lint": {
-      "dependsOn": ["@formbricks/api#build"]
-    },
-    "@formbricks/react-native#build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
-    },
-    "@formbricks/react-native#go": {
-      "cache": false,
-      "dependsOn": ["@formbricks/database#db:setup", "@formbricks/api#build", "@formbricks/js#build"],
-      "persistent": true
-    },
-    "@formbricks/react-native#lint": {
       "dependsOn": ["@formbricks/api#build"]
     },
     "@formbricks/surveys#build": {
